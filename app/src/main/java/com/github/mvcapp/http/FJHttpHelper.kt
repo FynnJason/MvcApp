@@ -62,6 +62,7 @@ open class FJHttpHelper<T : FJBaseBean>(t: T) {
         return deleteRequest!!
     }
 
+    // 执行
     fun execute(callback: FJHttpCallback<T>) {
         this.callback = callback
         getRequest?.execute(stringCallback)
