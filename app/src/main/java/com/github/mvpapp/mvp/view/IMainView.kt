@@ -13,13 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvpapp.http
+package com.github.mvpapp.mvp.view
 
+import com.github.mvpapp.base.IBaseView
+import com.github.mvpapp.bean.WeatherBean
+import okhttp3.internal.http.RealResponseBody
 
 /**
- * 网络请求成功与失败的回调接口
+ * MainActivity的View接口
  */
-interface FJHttpCallback<T> {
-    fun onSuccess(t: T, json: String)
-    fun onError(errorCode: Int, errorMsg: String)
+interface IMainView : IBaseView {
+    fun onSuccessWeather(t: WeatherBean,json: String)
+    fun onErrorWeather(errorCode: Int, errorMsg: String)
 }

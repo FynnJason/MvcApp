@@ -13,13 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvpapp.http
+package com.github.mvpapp.base
 
+import java.lang.ref.WeakReference
 
 /**
- * 网络请求成功与失败的回调接口
+ * Presenter基类
  */
-interface FJHttpCallback<T> {
-    fun onSuccess(t: T, json: String)
-    fun onError(errorCode: Int, errorMsg: String)
+abstract class BasePresenter<T> {
+
+    private var mWeakReference: WeakReference<T>? = null
+
+    fun attachView(t: T) {
+        mWeakReference = WeakReference(t)
+    }
+
+    fun getView() = mWeakReference?.get()
+
+    fun detachView() {
+        mWeakReference?.clear()
+        mWeakReference = null
+    }
 }

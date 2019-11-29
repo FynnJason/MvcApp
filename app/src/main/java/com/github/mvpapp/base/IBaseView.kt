@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvpapp.http
+package com.github.mvpapp.base
 
 
 /**
- * 网络请求成功与失败的回调接口
+ * View接口基类
  */
-interface FJHttpCallback<T> {
-    fun onSuccess(t: T, json: String)
-    fun onError(errorCode: Int, errorMsg: String)
+interface IBaseView {
+    fun showLoading()
+    fun hideLoading()
 }

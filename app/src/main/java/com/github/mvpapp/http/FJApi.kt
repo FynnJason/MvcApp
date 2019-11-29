@@ -19,7 +19,7 @@ package com.github.mvpapp.http
  * 网络请求地址
  */
 object FJApi {
-    const val SUCCESS_CODE = 200 // 网络请求成功Code
+    const val SUCCESS_CODE = 0 // 网络请求成功Code
     const val NOT_NETWORK_CODE = 500 // 网络请求失败Code
     const val EXCEPTION_CODE = -1 // 网络请求异常Code
 
@@ -28,7 +28,8 @@ object FJApi {
      *
      * 接口地址
      */
-    const val BASE_URL = "" // 服务器地址
+    const val BASE_URL = "http://apis.juhe.cn" // 服务器地址
 
+    const val WEATHER = "$BASE_URL/simpleWeather/query" // 查询天气
 
 }

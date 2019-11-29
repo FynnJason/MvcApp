@@ -15,8 +15,13 @@
  */
 package com.github.mvpapp.http
 
+import com.google.gson.annotations.SerializedName
+
 
 /**
  * 网络请求的数据基类
  */
-open class FJBaseBean(var code: Int = 0, var msg: String = "")
+open class FJBaseBean(
+    @SerializedName("error_code") var code: Int = 0
+    , @SerializedName("reason") var msg: String = ""
+)

@@ -13,13 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvpapp.http
+package com.github.mvpapp.mvp.model
 
+import com.github.mvpapp.bean.WeatherBean
 
 /**
- * 网络请求成功与失败的回调接口
+ * MainActivity的Model接口
  */
-interface FJHttpCallback<T> {
-    fun onSuccess(t: T, json: String)
-    fun onError(errorCode: Int, errorMsg: String)
+interface IMainModel {
+
+    fun loadWeather(city: String, listener: OnWeatherListener)
+
+    interface OnWeatherListener {
+        fun onSuccessWeather(t: WeatherBean, json: String)
+        fun onErrorWeather(errorCode: Int, errorMsg: String)
+    }
 }

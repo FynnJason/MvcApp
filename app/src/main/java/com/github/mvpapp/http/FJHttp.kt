@@ -20,4 +20,9 @@ package com.github.mvpapp.http
  */
 class FJHttp<T : FJBaseBean>(t: T) : FJHttpHelper<T>(t) {
 
+    // 获取城市天气
+    fun getWeatherByCity(city: String): FJHttp<T> {
+        get(FJApi.WEATHER).params("city", city).params("key", "921692315622429285d6000bd7c3a757")
+        return this
+    }
 }
