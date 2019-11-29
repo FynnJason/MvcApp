@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvcapp.http
+package com.github.mvpapp.http
+
 
 /**
- * 网络请求方法
+ * 网络请求的数据基类
  */
-class FJHttp<T : FJBaseBean>(t: T) : FJHttpHelper<T>(t) {
-
-}
+open class FJBaseBean(var code: Int = 0, var msg: String = "")

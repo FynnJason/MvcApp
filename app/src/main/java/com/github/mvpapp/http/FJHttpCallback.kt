@@ -13,10 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvcapp.http
+package com.github.mvpapp.http
 
 
 /**
- * 网络请求的数据基类
+ * 网络请求成功与失败的回调接口
  */
-open class FJBaseBean(var code: Int = 0, var msg: String = "")
+interface FJHttpCallback<T> {
+    fun onSuccess(t: T, responseBody: String)
+    fun onError(errorCode: Int, errorMsg: String)
+}

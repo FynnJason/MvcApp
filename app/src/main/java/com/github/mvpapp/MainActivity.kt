@@ -1,4 +1,4 @@
-package com.github.mvcapp
+package com.github.mvpapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

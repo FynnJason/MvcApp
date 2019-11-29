@@ -13,18 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.mvcapp.app
-
-import android.app.Application
-import com.github.mvcapp.http.FJHttpUtils
-
+package com.github.mvpapp.http
 
 /**
- * 初始化APP
+ * 网络请求地址
  */
-class FJApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        FJHttpUtils.init(this)
-    }
+object FJApi {
+    const val SUCCESS_CODE = 200 // 网络请求成功Code
+    const val NOT_NETWORK_CODE = 500 // 网络请求失败Code
+    const val EXCEPTION_CODE = -1 // 网络请求异常Code
+
+    /**
+     * 服务器地址
+     *
+     * 接口地址
+     */
+    const val BASE_URL = "" // 服务器地址
+
+
 }

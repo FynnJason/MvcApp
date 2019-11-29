@@ -1,4 +1,4 @@
-package com.github.mvcapp
+package com.github.mvpapp
 
 import org.junit.Test
 
