@@ -31,15 +31,16 @@ class MainPresenter : BasePresenter<IMainView>() {
     fun loadWeather(city: String) {
         getView()?.showLoading()
         mainModel.loadWeather(city, object : IMainModel.OnWeatherListener {
-            override fun onSuccessWeather(t: WeatherBean, json: String) {
+            override fun onSuccess(t: WeatherBean, json: String) {
                 getView()?.hideLoading()
-                getView()?.onSuccessWeather(t, json)
+                getView()?.showWeather(json)
             }
 
-            override fun onErrorWeather(errorCode: Int, errorMsg: String) {
+            override fun onError(errorCode: Int, errorMsg: String) {
                 getView()?.hideLoading()
-                getView()?.onErrorWeather(errorCode, errorMsg)
+                getView()?.showWeather(errorMsg)
             }
+
         })
     }
 }

@@ -23,6 +23,5 @@ import okhttp3.internal.http.RealResponseBody
  * MainActivity的View接口
  */
 interface IMainView : IBaseView {
-    fun onSuccessWeather(t: WeatherBean,json: String)
-    fun onErrorWeather(errorCode: Int, errorMsg: String)
+    fun showWeather(json: String)
 }

@@ -29,11 +29,11 @@ class MainModel : IMainModel {
             .getWeatherByCity(city)
             .execute(object : FJHttpCallback<WeatherBean> {
                 override fun onSuccess(t: WeatherBean, json: String) {
-                    listener.onSuccessWeather(t, json)
+                    listener.onSuccess(t, json)
                 }
 
                 override fun onError(errorCode: Int, errorMsg: String) {
-                    listener.onErrorWeather(errorCode, errorMsg)
+                    listener.onError(errorCode, errorMsg)
                 }
             })
     }

@@ -25,7 +25,7 @@ interface IMainModel {
     fun loadWeather(city: String, listener: OnWeatherListener)
 
     interface OnWeatherListener {
-        fun onSuccessWeather(t: WeatherBean, json: String)
-        fun onErrorWeather(errorCode: Int, errorMsg: String)
+        fun onSuccess(t: WeatherBean, json: String)
+        fun onError(errorCode: Int, errorMsg: String)
     }
 }

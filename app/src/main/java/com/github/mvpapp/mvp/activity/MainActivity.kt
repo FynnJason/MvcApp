@@ -40,12 +40,9 @@ class MainActivity : BaseActivity<IMainView, MainPresenter>(), IMainView {
         }
     }
 
-    override fun onSuccessWeather(t: WeatherBean, json: String) {
+    override fun showWeather(json: String) {
         tv_weather.text = json
     }
 
-    override fun onErrorWeather(errorCode: Int, errorMsg: String) {
-        tv_weather.text = errorMsg
-    }
 
 }
