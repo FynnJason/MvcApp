@@ -29,7 +29,6 @@ class MainPresenter : BasePresenter<IMainView>() {
     private val mainModel = MainModel()
 
     fun loadWeather(city: String) {
-        getView()?.showLoading()
         mainModel.loadWeather(city, object : IMainModel.OnWeatherListener {
             override fun onSuccess(t: WeatherBean, json: String) {
                 getView()?.hideLoading()

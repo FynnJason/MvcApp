@@ -16,7 +16,11 @@
 package com.github.mvpapp.app
 
 import android.app.Application
+import com.blankj.utilcode.util.Utils
 import com.github.mvpapp.http.FJHttpUtils
+import com.scwang.smartrefresh.header.MaterialHeader
+import com.scwang.smartrefresh.layout.SmartRefreshLayout
+import me.jessyan.autosize.AutoSizeConfig
 
 
 /**
@@ -26,5 +30,16 @@ class FJApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         FJHttpUtils.init(this)
+        AutoSizeConfig.getInstance()
+            .getUnitsManager()
+            .setSupportDP(true)
+            .setSupportSP(true)
+        Utils.init(this)
+    }
+
+    init {
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, layout ->
+            MaterialHeader(context)
+        }
     }
 }
