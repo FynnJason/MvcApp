@@ -29,7 +29,7 @@ abstract class BaseActivity<V, T : BasePresenter<V>> : AppCompatActivity(), IMai
     abstract fun createPresenter(): T
     abstract fun layoutResID(): Int
     abstract fun createActivity(savedInstanceState: Bundle?)
-    var mLoadingView: ProgressDialog? = null
+    private var mLoadingView: ProgressDialog? = null
 
     @Suppress("UNCHECKED_CAST")
     override fun onCreate(savedInstanceState: Bundle?) {
