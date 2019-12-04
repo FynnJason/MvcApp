@@ -15,3 +15,5 @@
 [Gson](https://github.com/google/gson) Json解析
 
 [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) Android智能下拉刷新框架
+
+[BottomNavigationViewEx](https://github.com/ittianyu/BottomNavigationViewEx) 一个增强BottomNavigationView的安卓库
