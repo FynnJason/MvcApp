@@ -19,22 +19,7 @@ import com.github.mvpapp.bean.WeatherBean
 import com.github.mvpapp.http.FJHttp
 import com.github.mvpapp.http.FJHttpCallback
 
-/**
- * MainActivity的Model
- */
+
 class MainModel : IMainModel {
 
-    override fun loadWeather(city: String, listener: IMainModel.OnWeatherListener) {
-        FJHttp(WeatherBean())
-            .getWeatherByCity(city)
-            .execute(object : FJHttpCallback<WeatherBean> {
-                override fun onSuccess(t: WeatherBean, json: String) {
-                    listener.onSuccess(t, json)
-                }
-
-                override fun onError(errorCode: Int, errorMsg: String) {
-                    listener.onError(errorCode, errorMsg)
-                }
-            })
-    }
 }

@@ -30,25 +30,9 @@ class MainActivity : BaseActivity<IMainView, MainPresenter>(), IMainView {
     override fun layoutResID(): Int = R.layout.activity_main
 
     override fun createActivity(savedInstanceState: Bundle?) {
-        initListener()
+
     }
 
-    private fun initListener() {
-        btn_load_weather.setOnClickListener {
-            val city = if (et_city.text.toString().isEmpty()) "成都" else et_city.text.toString()
-            showLoading()
-            mPresenter?.loadWeather(city)
-        }
-        srl_view.setOnRefreshListener {
-            val city = if (et_city.text.toString().isEmpty()) "成都" else et_city.text.toString()
-            mPresenter?.loadWeather(city)
-        }
-    }
-
-    override fun showWeather(json: String) {
-        tv_weather.text = json
-        srl_view.finishRefresh()
-    }
 
 
 }

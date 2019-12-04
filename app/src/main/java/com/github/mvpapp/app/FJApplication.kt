@@ -31,9 +31,9 @@ class FJApplication : Application() {
         super.onCreate()
         FJHttpUtils.init(this)
         AutoSizeConfig.getInstance()
-            .getUnitsManager()
+            .unitsManager
             .setSupportDP(true)
-            .setSupportSP(true)
+            .isSupportSP = true
         Utils.init(this)
     }
 

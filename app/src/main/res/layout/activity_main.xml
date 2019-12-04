@@ -6,32 +6,6 @@
     android:orientation="vertical"
     tools:context=".mvp.activity.MainActivity">
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:id="@+id/srl_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/et_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btn_load_weather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="获取天气" />
-
-            <TextView
-                android:id="@+id/tv_weather"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </LinearLayout>

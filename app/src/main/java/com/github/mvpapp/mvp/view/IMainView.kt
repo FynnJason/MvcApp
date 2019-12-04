@@ -19,9 +19,7 @@ import com.github.mvpapp.base.IBaseView
 import com.github.mvpapp.bean.WeatherBean
 import okhttp3.internal.http.RealResponseBody
 
-/**
- * MainActivity的View接口
- */
+
 interface IMainView : IBaseView {
-    fun showWeather(json: String)
+
 }

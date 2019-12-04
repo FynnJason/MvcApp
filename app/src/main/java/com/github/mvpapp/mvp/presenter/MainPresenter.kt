@@ -21,25 +21,7 @@ import com.github.mvpapp.mvp.model.IMainModel
 import com.github.mvpapp.mvp.model.MainModel
 import com.github.mvpapp.mvp.view.IMainView
 
-/**
- * MainActivity的Presenter
- */
+
 class MainPresenter : BasePresenter<IMainView>() {
 
-    private val mainModel = MainModel()
-
-    fun loadWeather(city: String) {
-        mainModel.loadWeather(city, object : IMainModel.OnWeatherListener {
-            override fun onSuccess(t: WeatherBean, json: String) {
-                getView()?.hideLoading()
-                getView()?.showWeather(json)
-            }
-
-            override fun onError(errorCode: Int, errorMsg: String) {
-                getView()?.hideLoading()
-                getView()?.showWeather(errorMsg)
-            }
-
-        })
-    }
 }

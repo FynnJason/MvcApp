@@ -17,15 +17,7 @@ package com.github.mvpapp.mvp.model
 
 import com.github.mvpapp.bean.WeatherBean
 
-/**
- * MainActivity的Model接口
- */
+
 interface IMainModel {
 
-    fun loadWeather(city: String, listener: OnWeatherListener)
-
-    interface OnWeatherListener {
-        fun onSuccess(t: WeatherBean, json: String)
-        fun onError(errorCode: Int, errorMsg: String)
-    }
 }
