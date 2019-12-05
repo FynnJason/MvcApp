@@ -15,15 +15,12 @@
  */
 package com.github.mvpapp.base
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mvpapp.mvp.view.IMainView
 
-
-/**
- * Activity基类
- */
 abstract class BaseActivity<V, T : BasePresenter<V>> : AppCompatActivity(), IMainView {
     var mPresenter: T? = null
     abstract fun createPresenter(): T
@@ -56,5 +53,11 @@ abstract class BaseActivity<V, T : BasePresenter<V>> : AppCompatActivity(), IMai
 
     override fun hideLoading() {
         mLoadingView?.cancel()
+    }
+
+    @SuppressLint("MissingSuperCall")
+    override fun onSaveInstanceState(outState: Bundle) {
+        val fragmentTag = "android:support:fragments"
+        outState.remove(fragmentTag)
     }
 }

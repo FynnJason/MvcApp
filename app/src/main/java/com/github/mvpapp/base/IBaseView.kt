@@ -15,10 +15,6 @@
  */
 package com.github.mvpapp.base
 
-
-/**
- * View接口基类
- */
 interface IBaseView {
     fun showLoading()
     fun hideLoading()

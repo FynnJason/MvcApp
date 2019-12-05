@@ -17,9 +17,6 @@ package com.github.mvpapp.base
 
 import java.lang.ref.WeakReference
 
-/**
- * Presenter基类
- */
 abstract class BasePresenter<T> {
 
     private var mWeakReference: WeakReference<T>? = null
