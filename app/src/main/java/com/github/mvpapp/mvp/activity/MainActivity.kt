@@ -19,6 +19,7 @@ import android.os.Bundle
 import com.github.mvpapp.R
 import com.github.mvpapp.base.BaseActivity
 import com.github.mvpapp.bean.WeatherBean
+import com.github.mvpapp.module.GlideApp
 import com.github.mvpapp.mvp.presenter.MainPresenter
 import com.github.mvpapp.mvp.view.IMainView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,7 +33,6 @@ class MainActivity : BaseActivity<IMainView, MainPresenter>(), IMainView {
     override fun createActivity(savedInstanceState: Bundle?) {
 
     }
-
 
 
 }
