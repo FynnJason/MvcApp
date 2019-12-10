@@ -25,3 +25,7 @@
 [Glide](https://github.com/bumptech/glide) 图片加载框架
 
 [EventBus](https://github.com/greenrobot/EventBus) 事件发布-订阅
+
+[ImmersionBar](https://github.com/gyf-dev/ImmersionBar) 沉浸式
+
+[EToast](https://github.com/Blincheng/EToast2) 吐司
